@@ -1,0 +1,7 @@
+/logs/*.log
+.env
+/docker/db-data/*
+#/docker/php/*
+src/supervisord.log
+src/supervisord.pid
+/.idea
