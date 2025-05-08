@@ -37,11 +37,11 @@ services:
       - ./docker/php/supervisord.d:/etc/supervisord.d
     working_dir: /work/app
     environment:
-      #- DB_CONNECTION=mysql
-      #- DB_HOST=project-db
-      #- DB_DATABASE=${DB_NAME:-project_database}
-      #- DB_USERNAME=${DB_USER:-project}
-      #- DB_PASSWORD=${DB_PASS:-project123!db}
+      - DB_CONNECTION=mysql
+      - DB_HOST=project-db
+      - DB_DATABASE=${DB_NAME:-project_database}
+      - DB_USERNAME=${DB_USER:-project}
+      - DB_PASSWORD=${DB_PASS:-project123!db}
       - TZ=${TZ:-Asia/Tokyo}
     restart: always
     entrypoint: ["/usr/bin/supervisord", "-n", "-c",  "/etc/supervisord.conf"]
